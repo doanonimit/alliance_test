@@ -13,6 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+Route::redirect('/', '/contacts');
+Route::view('/contacts', 'contacts');
+Route::view('/contacts/show', 'contacts', ['action' => 'show']);
+Route::view('/contacts/add', 'contacts', ['action' => 'add']);
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
