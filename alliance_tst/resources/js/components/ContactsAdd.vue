@@ -65,11 +65,6 @@
                     'email': /.+@.+\..+/
                 },
                 apiKey: ''
-                // empty_contact: {
-                //     'name': '',
-                //     'phone': '',
-                //     'email': ''
-                // },
             }
         },
         computed: {
@@ -79,7 +74,7 @@
             getSources: function () {
                 return window.sources;
             }
-        },
+        },s
         methods: {
             clearContacts: function () {
                 this.contacts = [
